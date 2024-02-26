@@ -143,4 +143,10 @@
 * {
   font-family: Poppins;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+.activeLink{
+  font-weight: 500;
+  color: #212184 !important;
+}

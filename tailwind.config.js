@@ -9,9 +9,11 @@ module.exports = {
         "grey-3": "#f5f5f5",
         "grey-4": "#969696",
         "custom-black": "#565656",
-        "blue": "#080876",
+        "blue": "#212184",
+        "lighter-blue": "#f5f5f9",
         "light-blue": "#0066cc",
         "light-blue-2": "#00b2ff",
+        "hover-blue": "#E6E6F1",
         "yellow": "#ebd228"
       },
       boxShadow: {
