@@ -56,7 +56,7 @@
   <body class="w-full m-0 p-0 bg-white scroll-smooth relative">
     <nav class="bg-white fixed w-full z-50 top-0">
       <div
-        class="w-11/12 xl:max-w-screen-xl mx-auto flex items-center justify-between flex-wrap py-2 md:py-3 bg-white"
+        class="w-11/12 2xl:w-[1400px] mx-auto flex items-center justify-between flex-wrap py-2 md:py-3 bg-white"
         x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false"
         :class="{ '' : isOpen , '' : !isOpen}">
@@ -138,95 +138,19 @@
         </div>
       </div>
     </nav>
-    <!-- <nav class="fixed w-full z-50 top-0 start-0 bg-white">
+    <section id="home" class="z-20 py-5 w-full">
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="./src/images/blue-logo.png"
-            class="h-16"
-            alt="Umagine Logo" />
-        </a>
-        <div class="flex gap-10">
-          <div
-            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
-              data-collapse-toggle="navbar-sticky"
-              type="button"
-              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-              aria-controls="navbar-sticky"
-              aria-expanded="false">
-              <p class="sr-only">Open main menu</p>
-              <svg
-                class="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14">
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 1h15M1 7h15M1 13h15" />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky">
-            <ul
-              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent text-sm">
-              <li>
-                <a href="#" class="block py-2 px-3 rounded text-blue md:p-0">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="block py-2 px-3 text-grey-2 font-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue hover:font-normal md:p-0">
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="block py-2 px-3 text-grey-2 font-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue hover:font-normal md:p-0">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  class="block py-2 px-3 text-grey-2 font-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue hover:font-normal md:p-0">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav> -->
-    <section id="home" class="z-20 md:pt-5 md:pb-10 w-full">
-      <div
-        class="pt-20 sm:pt-28 pb-10 w-11/12 md:md:max-w-screen-xl md:w-full md:grid md:grid-cols-5 items-center justify-between mx-auto gap-10">
-        <div class="w-full col-span-2 rounded-lg bg-white relative">
-          <img
-            src="./src/images/roberto-cortese-ejhjSZKTeeg-unsplash.jpg"
-            class="w-full md:h-[600px] aspect-video object-cover rounded-lg"
-            alt="" />
-        </div>
-        <div class="w-full md:col-span-3 space-y-3 relative">
+        class="w-11/12 2xl:w-[1400px] h-[720px] 2xl:h-[80vh] flex items-center justify-center mx-auto gap-10 relative">
+        <div class="w-fit mx-auto space-y-3 relative">
           <span
-            class="hidden bg-blue w-[85px] h-[85px] md:flex items-center justify-center rounded-full">
+            class="bg-[#212184] w-[65px] h-[65px] mx-auto flex items-center justify-center rounded-full">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
               y="0px"
-              class="w-12 h-12 fill-white"
+              class="w-10 h-10 fill-white"
               viewBox="0 0 512 512"
               style="enable-background: new 0 0 512 512"
               xml:space="preserve">
@@ -402,106 +326,65 @@
             </svg>
           </span>
           <h1
-            class="w-full font-medium text-4xl sm:text-6xl py-2 md:py-0 md:text-[80px] md:leading-[90px] md:tracking-tighter relative z-20">
-            You Imagine, We Create.
+            class="w-full mx-auto font-medium text-4xl sm:text-6xl md:text-7xl py-2 md:py-0 xl:text-[80px] md:leading-[80px] lg:leading-[90px] md:tracking-tighter relative z-20 text-center">
+            You Imagine,
+            <span class="text-blue">We Create.</span>
+            <!-- Accounting made simple <br> for <span class="text-blue">small businesses.</span>  -->
           </h1>
-          <div class="flex flex-col sm:flex-row w-full gap-5">
-            <div
-              class="w-full md:w-1/2 p-4 md:p-5 rounded-2xl bg-lighter-blue shadow-custom-stuff border border-slate-50 space-y-3 md:space-y-10">
-              <div class="flex gap-2 flex-wrap">
-                <p
-                  class="px-2 py-1 md:px-4 md:py-1.5 text-xs md:text-sm font-light rounded-xl border border-[#cecee4]">
-                  Websites
-                </p>
-                <p
-                  class="px-2 py-1 md:px-4 md:py-1.5 text-xs md:text-sm font-light rounded-xl border border-blue text-blue bg-[#ebebf4]">
-                  Promotions
-                </p>
-                <p
-                  class="px-2 py-1 md:px-4 md:py-1.5 text-xs md:text-sm font-light rounded-xl border border-[#cecee4]">
-                  Branding
-                </p>
-                <p
-                  class="px-2 py-1 md:px-4 md:py-1.5 text-xs md:text-sm font-light rounded-xl border border-[#cecee4]">
-                  Analytics
-                </p>
-                <p
-                  class="px-2 py-1 md:px-4 md:py-1.5 text-xs md:text-sm font-light rounded-xl border border-[#cecee4]">
-                  Management
-                </p>
-              </div>
-              <p class="text-sm font-light text-grey-4">
-                We offer the latest trends and services that not only provide
-                insights into the future of your business but also breathe life
-                into your ideas.
-              </p>
-            </div>
-            <div
-              class="w-full md:w-1/2 p-4 md:p-5 rounded-2xl bg-lighter-blue shadow-custom-stuff border border-slate-50 flex flex-col justify-between space-y-3 md:space-y-0">
-              <div class="flex justify-between">
-                <div class="space-y-4">
-                  <div class="flex gap-3 items-center">
-                    <span
-                      class="h-7 w-7 p-1 rounded-md bg-blue border border-grey">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="fill-white"
-                        viewBox="0 0 64 64">
-                        <g id="Think_out_of_the_box">
-                          <path
-                            d="M35.0427,18.39a1.35,1.35,0,1,1,2.6992,0,6.3149,6.3149,0,0,1-4.957,6.1576V34.8139h4.8a1.7622,1.7622,0,0,0,1.7481-1.8193,4.8315,4.8315,0,0,1,1.7578-4.1826,15.1692,15.1692,0,1,0-19.583-.2276,6.7262,6.7262,0,0,1,.8046.8257,5.7517,5.7517,0,0,1,1.1895,3.6538,1.75,1.75,0,0,0,1.75,1.75h4.834V24.5472A6.3144,6.3144,0,0,1,25.13,18.39a1.35,1.35,0,1,1,2.6992,0,3.607,3.607,0,0,0,7.2139,0Z"
-                            id="id_101"></path>
-                          <path
-                            d="M55.0307,46.301l-5.1894-7.2632a1.35,1.35,0,0,0-1.0984-.5652H32.5593l6.57,9.3145,15.1258.0186A.9514.9514,0,0,0,55.0307,46.301Z"
-                            id="id_102"></path>
-                          <path
-                            d="M13.8767,39.038l-5.146,7.2034a.9516.9516,0,0,0,.7729,1.5049l15.0743.0193,6.59-9.293H14.9756A1.35,1.35,0,0,0,13.8767,39.038Z"
-                            id="id_103"></path>
-                          <path
-                            d="M25.2751,50.4667h-.0019l-12.0479.01V61.0527a1.75,1.75,0,0,0,1.75,1.75H30.51V44.07l-4.1328,5.8279A1.3523,1.3523,0,0,1,25.2751,50.4667Z"
-                            id="id_104"></path>
-                          <path
-                            d="M37.3259,49.9145l-4.1172-5.8362V62.8027H48.7429a1.75,1.75,0,0,0,1.75-1.75V50.5012l-12.0654-.0149A1.3519,1.3519,0,0,1,37.3259,49.9145Z"
-                            id="id_105"></path>
-                        </g>
-                      </svg>
-                    </span>
-                    <p class="text-sm font-light">Shaping Startups</p>
-                  </div>
-                  <p class="text-3xl md:text-5xl font-medium -mb-1">10+</p>
-                </div>
-                <div class="flex gap-0.5 items-baseline">
-                  <div
-                    class="w-4 h-4 md:w-7 md:h-7 rounded md:rounded-lg bg-[#6b6bad]"></div>
-                  <div
-                    class="w-4 h-[30px] md:w-7 md:h-[40px] rounded md:rounded-lg bg-[#52529f]"></div>
-                  <div
-                    class="w-4 h-[40px] md:w-7 md:h-[55px] rounded md:rounded-lg bg-[#393991]"></div>
-                  <div
-                    class="w-4 h-[50px] md:w-7 md:h-[70px] rounded md:rounded-lg bg-[#212184]"></div>
-                  <div
-                    class="w-4 h-[60px] md:w-7 md:h-[85px] rounded md:rounded-lg bg-[#080876]"></div>
-                </div>
-              </div>
-              <p class="text-sm font-light text-grey-4">
-                Every project serves as a testament to our unwavering commitment
-                to excellence, fueled by the infusion of creativity and
-                innovation.
-              </p>
-            </div>
-          </div>
+          <p
+            class="max-w-[650px] mx-auto text-grey-4 text-center relative z-10">
+            We transform your local or ​startup business into a
+            success-​generating engine through innovative ​marketing.
+          </p>
+          <!-- <svg
+            aria-hidden="true"
+            viewBox="0 0 418 42"
+            class="h-[30px] w-[55%] -mt-10 mx-auto fill-blue"
+            preserveAspectRatio="none">
+            <path
+              d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
+          </svg> -->
+        </div>
+        <div
+          class="w-fit mx-auto absolute bottom-12 md:bottom-5 left-0 right-0">
+          <button
+            onclick="scrollToAbout"
+            class="w-10 h-10 mx-auto animate-bounce fill-grey-2">
+            <svg
+              enable-background="new 0 0 32 32"
+              id="Слой_1"
+              version="1.1"
+              viewBox="0 0 32 32"
+              class="h-10 w-10"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Double_Chevron_Down">
+                <path
+                  d="M22.285,15.349L16,21.544l-6.285-6.196c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   l6.999,6.899c0.379,0.375,1.048,0.377,1.429,0l6.999-6.9c0.394-0.39,0.394-1.024,0-1.414   C23.319,14.958,22.679,14.958,22.285,15.349z"></path>
+                <path
+                  d="M15.286,16.662c0.379,0.375,1.048,0.377,1.429,0l6.999-6.899c0.394-0.391,0.394-1.024,0-1.414   c-0.394-0.391-1.034-0.391-1.428,0L16,14.544L9.715,8.349c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   L15.286,16.662z"></path>
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
     <section id="about" class="py-5 relative z-20">
       <div
-        class="w-11/12 md:max-w-screen-xl mx-auto bg-lighter-blue shadow-custom-stuff px-4 py-8 md:p-10 rounded-xl flex justify-between items-center">
+        class="w-11/12 2xl:w-[1400px] mx-auto bg-lighter-blue shadow-custom-stuff px-4 py-8 md:p-10 rounded-xl flex justify-between items-center">
         <div class="space-y-3 md:space-y-5 md:w-[65%]">
           <h2 class="text-sm text-blue font-medium w-fit">Our Mission</h2>
           <div class="w-full sm:w-1/2 mx-auto md:hidden">
             <img src="./src/images/Chanel.png" class="" alt="" />
           </div>
-          <p class="text-2xl md:text-5xl md:max-w-[650px]">
+          <p class="text-2xl sm:text-4xl lg:text-5xl lg:max-w-[650px]">
             Your Company's Success Is Our Delight
           </p>
           <p class="text-sm font-light text-grey-4 max-w-[650px] pb-5">
@@ -527,13 +410,13 @@
     </section>
     <section id="services" class="py-5 md:py-14 relative z-20">
       <div
-        class="w-11/12 md:max-w-screen-xl mx-auto rounded-xl space-y-10 md:space-y-16">
+        class="w-11/12 2xl:w-[1400px] mx-auto rounded-xl space-y-10 md:space-y-16">
         <div class="text-center md:w-8/12 mx-auto space-y-2 md:space-y-4">
           <h2
             class="bg-lighter-blue text-sm text-blue font-medium p-2 rounded-lg w-fit mx-auto">
             Our Services
           </h2>
-          <p class="text-2xl md:text-5xl text-center">
+          <p class="text-2xl sm:text-4xl lg:text-5xl text-center">
             Excellence From Concept
             <br />
             To Completion
@@ -544,7 +427,7 @@
           </p>
         </div>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-x-20 md:gap-y-10">
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-20 md:gap-y-10">
           <div class="space-y-4">
             <div
               class="w-9 h-9 rounded-lg bg-blue p-1 flex justify-center items-center">
@@ -670,23 +553,24 @@
           </div>
           <div class="space-y-4">
             <div
-              class="w-9 h-9 rounded-lg bg-blue p-1 flex justify-center items-center">
+              class="w-9 h-9 rounded-lg bg-blue p-2 flex justify-center items-center">
               <svg
-                data-name="Layer 1"
+                fill="#fff"
+                class="w-6"
+                version="1.1"
                 id="Layer_1"
-                viewBox="0 0 32 32"
-                class="fill-white"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M19,14.46c-.6.15-1.19.28-1.78.37A10.46,10.46,0,0,1,15.6,15l-1.44-1.08.86-.05.81-.1c.27,0,.54-.08.82-.14l.88-.21-1.6-1.2c-.42.07-.85.13-1.3.18a7.39,7.39,0,0,1-1.33,0A5.9,5.9,0,0,1,12,12.15a4.1,4.1,0,0,1-1.24-.65,2,2,0,0,1-.65-.71.77.77,0,0,1,0-.66,1.42,1.42,0,0,1,.53-.62A5,5,0,0,1,11.66,9L10.9,8.4,12.32,8l.74.55c.45-.11.93-.2,1.44-.28A13.34,13.34,0,0,1,16,8.1l1.45,1.09a17.94,17.94,0,0,0-3,.42l1.62,1.23c.42-.07.86-.13,1.31-.17a7.39,7.39,0,0,1,1.33,0,6,6,0,0,1,1.31.26,4,4,0,0,1,1.23.64c.62.47.85.91.67,1.33A2.68,2.68,0,0,1,20.33,14l.76.57-1.42.4Zm-6.33-3.57a1.5,1.5,0,0,0,.75.27,4.53,4.53,0,0,0,1.12-.06L13.08,10c-.39.16-.61.3-.66.44S12.44,10.75,12.62,10.89Zm6.71,1.24a1.38,1.38,0,0,0-.73-.27,4.21,4.21,0,0,0-1.08.06l1.38,1C19.56,12.68,19.71,12.41,19.33,12.13Z" />
-                <path
-                  d="M16,18C8.59,18,3,15.21,3,11.5S8.59,5,16,5s13,2.79,13,6.5S23.41,18,16,18ZM16,7C9.52,7,5,9.37,5,11.5S9.52,16,16,16s11-2.37,11-4.5S22.48,7,16,7Z" />
-                <path
-                  d="M17.5,19c-.49,0-1,0-1.5,0s-1,0-1.5,0C9.08,18.7,4.84,17,3,14.44v.06C3,18.21,8.59,21,16,21s13-2.79,13-6.5v-.06C27.16,17,22.92,18.7,17.5,19Z" />
-                <path
-                  d="M17.5,22c-.49,0-1,0-1.5,0s-1,0-1.5,0C9.08,21.7,4.84,20,3,17.44v.06C3,21.21,8.59,24,16,24s13-2.79,13-6.5v-.09C27.16,20,22.92,21.7,17.5,22Z" />
-                <path
-                  d="M17.5,25c-.49,0-1,0-1.5,0s-1,0-1.5,0C9.08,24.7,4.84,23,3,20.44v.06C3,24.21,8.59,27,16,27s13-2.79,13-6.5v-.1C27.16,23,22.92,24.7,17.5,25Z" />
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve">
+                <g id="XMLID_22_">
+                  <path
+                    id="XMLID_23_"
+                    d="M315.001,30.018L30,30.001V15c0-8.283-6.716-15-15-15S0,6.717,0,15v300c0,8.284,6.716,15,15,15
+		s15-6.716,15-15V60.001l90,0.005V90H75c-8.284,0-15,6.717-15,15v130c0,8.284,6.716,15,15,15h210c8.284,0,15-6.716,15-15V105
+		c0-8.283-6.716-15-15-15h-45V60.013l74.999,0.005H315c8.283,0,15-6.717,15-15S323.285,30.018,315.001,30.018z M210,90h-60V60.018
+		h60V90z" />
+                </g>
               </svg>
             </div>
             <h3 class="font-medium text-blue">Advertisement</h3>
@@ -699,19 +583,15 @@
             <div
               class="w-9 h-9 rounded-lg bg-blue p-2 flex justify-center items-center">
               <svg
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 93.58 122.88"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
                 class="fill-white"
-                xml:space="preserve">
-                <g>
-                  <path
-                    d="M46.79,16.56c8.35,0,15.9,3.38,21.38,8.85c5.47,5.47,8.85,13.03,8.85,21.38c0,7.98-3.09,15.24-8.14,20.64 c-0.52-2.83-1.3-5.38-2.3-7.64c2.46-3.73,3.89-8.2,3.89-13c0-6.54-2.65-12.46-6.93-16.74c-4.28-4.28-10.2-6.93-16.74-6.93 c-6.54,0-12.46,2.65-16.74,6.93c-4.28,4.28-6.93,10.2-6.93,16.74c0,4.99,1.54,9.62,4.18,13.44c-1.01,2.23-1.81,4.72-2.35,7.46 c-5.19-5.43-8.38-12.79-8.38-20.9c0-8.35,3.38-15.9,8.85-21.38C30.88,19.94,38.44,16.56,46.79,16.56L46.79,16.56z M30.79,66.93 c2.55-9.53,32.11-7.76,32.11-0.35C62.88,143.24,30.77,139.93,30.79,66.93L30.79,66.93z M46.94,32.81c7.06,0,12.78,5.72,12.78,12.78 c0,7.06-5.72,12.78-12.78,12.78c-7.06,0-12.78-5.72-12.78-12.78C34.16,38.53,39.88,32.81,46.94,32.81L46.94,32.81z M46.79,0 c12.92,0,24.62,5.24,33.08,13.7c8.47,8.47,13.7,20.16,13.7,33.08c0,12.92-5.24,24.62-13.7,33.08c-3.32,3.32-7.14,6.14-11.33,8.35 c0.3-2.31,0.57-4.7,0.79-7.2c0.03-0.32,0.05-0.64,0.07-0.96c2.09-1.43,4.04-3.04,5.83-4.83c7.28-7.28,11.78-17.34,11.78-28.45 c0-11.11-4.5-21.17-11.78-28.45C67.96,11.06,57.9,6.55,46.79,6.55c-11.11,0-21.17,4.5-28.45,11.78 C11.06,25.62,6.55,35.68,6.55,46.79c0,11.11,4.5,21.17,11.78,28.45c1.83,1.83,3.83,3.48,5.97,4.93c0.03,0.46,0.06,0.91,0.11,1.38 c0.23,2.34,0.5,4.59,0.8,6.77c-4.27-2.22-8.15-5.08-11.52-8.45C5.24,71.41,0,59.71,0,46.79C0,33.87,5.24,22.17,13.7,13.7 C22.17,5.24,33.87,0,46.79,0L46.79,0z" />
-                </g>
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.3657 0.888071C12.6127 0.352732 13.1484 0 13.75 0C14.9922 0 15.9723 0.358596 16.4904 1.29245C16.7159 1.69889 16.8037 2.13526 16.8438 2.51718C16.8826 2.88736 16.8826 3.28115 16.8826 3.62846L16.8825 7H20.0164C21.854 7 23.2408 8.64775 22.9651 10.4549L21.5921 19.4549C21.3697 20.9128 20.1225 22 18.6434 22H8L8 9H8.37734L12.3657 0.888071Z" />
+                <path
+                  d="M6 9H3.98322C2.32771 9 1 10.3511 1 12V19C1 20.6489 2.32771 22 3.98322 22H6L6 9Z" />
               </svg>
             </div>
             <h3 class="font-medium text-blue">Social Media Management</h3>
@@ -742,32 +622,42 @@
           </div>
           <div class="space-y-4">
             <div
-              class="w-9 h-9 rounded-lg bg-blue p-1 flex justify-center items-center">
+              class="w-9 h-9 rounded-lg bg-blue p-1.5 flex justify-center items-center">
               <svg
-                data-name="Layer 1"
-                id="Layer_1"
-                viewBox="0 0 512 512"
-                class="fill-white"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M300.87,260.4H362A161.42,161.42,0,0,0,350.29,211Z" />
-                <path
-                  d="M230.33,186.92a90.83,90.83,0,0,1,30.86,18.82l50.95-51a163.42,163.42,0,0,0-28.06-21.62Z" />
-                <path
-                  d="M271.63,327.7l25.43,25.42,25.71,25.71A161.69,161.69,0,0,0,362,284.1H289.69A90.21,90.21,0,0,1,271.63,327.7Z" />
-                <path
-                  d="M271.84,217.42a90.44,90.44,0,0,1,15.85,33.82l55.48-55.46A163.57,163.57,0,0,0,323,166.23Z" />
-                <path
-                  d="M410.4,51.58a11.86,11.86,0,0,0-11.85-11.85H326.73a11.81,11.81,0,0,0-8.37,3.48l-72.88,72.87a159.87,159.87,0,0,0-34.2-6.39V182c.45.06.87.22,1.33.29L242.93,152c.16-.15.37-.2.53-.35l88.18-88.19h66.91A11.85,11.85,0,0,0,410.4,51.58Z" />
-                <path
-                  d="M386.46,98.09a11.85,11.85,0,0,0-11.85-11.85H336a11.85,11.85,0,0,0,0,23.7h38.57A11.85,11.85,0,0,0,386.46,98.09Z" />
-                <path
-                  d="M463.71,279.2h-52a11.85,11.85,0,0,0,0,23.7h52a11.85,11.85,0,1,0,0-23.7Z" />
-                <path
-                  d="M437.7,318.67h-26a11.85,11.85,0,0,0,0,23.7h26a11.85,11.85,0,1,0,0-23.7Z" />
-                <path
-                  d="M381.64,409.09H319.27l-13.4-13.4.13-.1-51.13-51.13A91,91,0,1,1,187.57,182V109.69C103.2,115.77,36.44,186.36,36.44,272.25c0,89.88,73.12,163,163,163a161.85,161.85,0,0,0,87.13-25.35L306,429.32a11.83,11.83,0,0,0,8.38,3.48h67.28a11.86,11.86,0,0,0,0-23.71Z" />
-                <path
-                  d="M359.87,448.57H317.46a11.85,11.85,0,1,0,0,23.7h42.41a11.85,11.85,0,1,0,0-23.7Z" />
+                fill="#fff"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="800px"
+                height="800px"
+                viewBox="0 0 101.647 101.647"
+                xml:space="preserve">
+                <g>
+                  <g>
+                    <path
+                      d="M51.604,13.413c-20.654,0-37.397,16.743-37.397,37.397c0,20.653,16.743,37.397,37.397,37.397
+			C72.258,88.207,89,71.463,89,50.81c0-0.448-0.018-0.893-0.033-1.337H51.604V13.413z" />
+                    <path
+                      d="M7.766,50.81c0-11.71,4.56-22.719,12.84-30.999C35.963,4.455,59.967,2.907,77.081,15.143h-3.143c-1.657,0-3,1.343-3,3
+			s1.343,3,3,3h11.141c0.795,0,1.559-0.316,2.121-0.879c0.563-0.563,0.879-1.325,0.879-2.121v-11.5c0-1.657-1.344-3-3-3
+			c-1.658,0-3,1.344-3,3v3.482c-19.9-14.924-48.333-13.353-66.423,4.737C6.054,24.462,0.766,37.23,0.766,50.81
+			s5.288,26.347,14.89,35.947c7.557,7.558,17.106,12.471,27.615,14.208l1.142-6.906c-9.058-1.498-17.29-5.734-23.807-12.251
+			C12.326,73.527,7.766,62.519,7.766,50.81z" />
+                    <path
+                      d="M63.848,92.912c-4.628,1.342-9.426,1.905-14.256,1.689l-0.318,6.992c0.782,0.035,1.562,0.054,2.341,0.054
+			c4.805,0,9.565-0.675,14.18-2.013c1.529-0.442,3.061-0.967,4.55-1.555l-2.574-6.511C66.486,92.078,65.167,92.531,63.848,92.912z" />
+                    <path
+                      d="M76.809,86.687c-1.98,1.396-4.092,2.633-6.27,3.676l3.021,6.314c2.53-1.211,4.979-2.647,7.28-4.269
+			c2.379-1.675,4.638-3.576,6.712-5.65l-4.95-4.949C80.811,83.6,78.862,85.242,76.809,86.687z" />
+                    <path
+                      d="M88.827,73.99c-0.732,1.172-1.527,2.32-2.365,3.414c-0.457,0.598-0.932,1.186-1.422,1.764l5.334,4.533
+			c0.568-0.67,1.123-1.356,1.646-2.041c0.973-1.271,1.896-2.604,2.745-3.966c0.961-1.54,1.849-3.149,2.638-4.784l-6.304-3.043
+			C90.418,71.275,89.654,72.662,88.827,73.99z" />
+                    <path
+                      d="M94.096,61.619c-0.501,1.979-1.146,3.937-1.917,5.82l6.479,2.65c0.894-2.188,1.641-4.458,2.223-6.752L94.096,61.619z" />
+                  </g>
+                </g>
               </svg>
             </div>
             <h3 class="font-medium text-blue">Data Analystics & Insight</h3>
@@ -806,7 +696,7 @@
     </section>
     <section id="contact" class="py-5 md:py-14 relative z-20">
       <div
-        class="w-11/12 md:max-w-screen-xl mx-auto md:w-full flex flex-col gap-8 md:grid md:grid-cols-5">
+        class="w-11/12 2xl:w-[1400px] mx-auto flex flex-col gap-8 lg:grid lg:grid-cols-5">
         <div
           class="p-4 md:p-7 rounded-xl shadow-custom-stuff md:col-span-2 flex flex-col justify-between bg-lighter-blue">
           <div class="space-y-5">
@@ -835,7 +725,7 @@
               </svg>
               <h2 class="text-sm text-blue font-medium w-fit">Contact Us</h2>
             </span>
-            <p class="text-2xl md:text-4xl mb-0">
+            <p class="text-2xl md:text-3xl lg:text-4xl mb-0">
               Your satisfaction is our priority, and we look forward
             </p>
             <a
@@ -920,7 +810,7 @@
             </a>
           </div>
 
-          <p class="mt-5 md:mt-0 text-sm font-light text-grey-4">
+          <p class="mt-5 lg:mt-0 text-sm font-light text-grey-4">
             Whether you have questions, require assistance, or wish to discuss
             an idea you'd like to collaborate on, our team is ready to listen to
             you.
@@ -999,7 +889,7 @@
       let navLinks = document.getElementsByClassName("navLink");
       const sections = document.querySelectorAll("section");
 
-      // Hanling navbar scroll-to section 
+      // Hanling navbar scroll-to section
 
       for (let item of anchorlinks) {
         item.addEventListener("click", e => {

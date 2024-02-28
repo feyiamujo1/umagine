@@ -14,7 +14,8 @@ module.exports = {
         "light-blue": "#0066cc",
         "light-blue-2": "#00b2ff",
         "hover-blue": "#E6E6F1",
-        "yellow": "#ebd228"
+        "yellow": "#ebd228",
+        "hero": "radial-gradient(circle, rgba(230,230,241,1) 3%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 40%, rgba(230,230,241,1) 100%);"
       },
       boxShadow: {
         "custom-stuff": "1px 3px 10px 0px #1B1B1B1A;"
