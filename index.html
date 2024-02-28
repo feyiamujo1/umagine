@@ -329,26 +329,17 @@
             class="w-full mx-auto font-medium text-4xl sm:text-6xl md:text-7xl py-2 md:py-0 xl:text-[80px] md:leading-[80px] lg:leading-[90px] md:tracking-tighter relative z-20 text-center">
             You Imagine,
             <span class="text-blue">We Create.</span>
-            <!-- Accounting made simple <br> for <span class="text-blue">small businesses.</span>  -->
           </h1>
           <p
             class="max-w-[650px] mx-auto text-grey-4 text-center relative z-10">
             We transform your local or ​startup business into a
             success-​generating engine through innovative ​marketing.
           </p>
-          <!-- <svg
-            aria-hidden="true"
-            viewBox="0 0 418 42"
-            class="h-[30px] w-[55%] -mt-10 mx-auto fill-blue"
-            preserveAspectRatio="none">
-            <path
-              d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
-          </svg> -->
         </div>
         <div
           class="w-fit mx-auto absolute bottom-12 md:bottom-5 left-0 right-0">
           <button
-            onclick="scrollToAbout"
+            onclick="scrollToAbout()"
             class="w-10 h-10 mx-auto animate-bounce fill-grey-2">
             <svg
               enable-background="new 0 0 32 32"
@@ -816,7 +807,10 @@
             you.
           </p>
         </div>
-        <div
+        <form
+          onsubmit="SubmitContactForm(event)"
+          method="POST"
+          id="ContactForm"
           class="p-4 md:p-7 rounded-xl shadow-custom-stuff md:col-span-3 space-y-5">
           <div class="">
             <h2 class="text-blue font-medium text-sm">Contact Form</h2>
@@ -831,6 +825,8 @@
               <input
                 type="text"
                 name="fullname"
+                id="fullname"
+                required
                 class="w-full rounded-md mt-2 !outline-none focus:border-[#03032f] focus:outline-none focus:ring-0 p-2.5 text-sm bg-white autofill:!bg-white" />
             </div>
             <div class="w-full sm:w-1/2">
@@ -841,14 +837,18 @@
               <input
                 type="tel"
                 name="phone"
+                id="phoneNumber"
                 class="w-full rounded-md mt-2 !outline-none focus:border-[#03032f] focus:outline-none focus:ring-0 p-2.5 text-sm bg-white autofill:!bg-white" />
             </div>
           </div>
           <div class="w-full">
-            <label for="name" class="text-sm text-grey-4">Email</label>
+            <label for="email" class="text-sm text-grey-4">Email</label>
             <br />
             <input
-              type="text"
+              type="email"
+              id="email"
+              name="email"
+              required
               class="w-full rounded-md mt-2 !outline-none focus:border-[#03032f] focus:outline-none focus:ring-0 p-2.5 text-sm bg-white autofill:!bg-white" />
           </div>
           <div class="w-full">
@@ -856,22 +856,53 @@
             <br />
             <input
               type="text"
+              name="subject"
+              id="subject"
+              required
               class="w-full rounded-md mt-2 !outline-none focus:border-[#03032f] focus:outline-none focus:ring-0 p-2.5 text-sm !bg-white autofill:!bg-white" />
           </div>
           <div class="w-full">
             <p for="message" class="text-sm text-grey-4 mb-2">Message</p>
             <textarea
               name="message"
-              id=""
+              id="message"
+              required
               class="w-full rounded-md !outline-none focus:border-[#03032f] focus:outline-none focus:ring-0 p-2.5 text-sm !bg-white autofill:!bg-white"></textarea>
           </div>
-          <div class="mt-5 flex justify-end">
+          <div class="mt-5 flex justify-between">
+            <div class="text-sm">
+              <p class="text-green-500 hidden" id="correct_response">
+                Message Successfully Sent
+              </p>
+              <p class="text-red-500 hidden" id="error_response">
+                Error Sending Message
+              </p>
+            </div>
             <button
-              class="bg-blue rounded-lg px-4 py-2.5 text-white hover:bg-hover-blue duration-300 transition-all border hover:border-slate-50 hover:text-grey-4">
-              Send Message
+              type="submit"
+              id="contactFormButton"
+              class="bg-blue rounded-lg px-4 py-2.5 text-white hover:bg-hover-blue duration-300 transition-all border flex items-center justify-center hover:border-slate-50 hover:text-grey-4 w-[151px] h-[46px] disabled:pointer-events-none disabled:bg-hover-blue">
+              <span id="buttonText" class="">Send Message</span>
+              <span id="buttonLoader" class="hidden">
+                <svg
+                  class="w-6 animate-spin"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-blue"
+                  class="hds-flight-icon--animation-loading">
+                  <g fill="#000000" fill-rule="evenodd" clip-rule="evenodd">
+                    <path
+                      d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"
+                      opacity=".2" />
+
+                    <path
+                      d="M7.25.75A.75.75 0 018 0a8 8 0 018 8 .75.75 0 01-1.5 0A6.5 6.5 0 008 1.5a.75.75 0 01-.75-.75z" />
+                  </g>
+                </svg>
+              </span>
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </section>
     <footer class="w-full">
@@ -944,6 +975,23 @@
           }
         });
       });
+
+      const scrollToAbout = () => {
+        anchorlinks.forEach((currentLink, index) => {
+          currentLink.classList.remove("activeLink");
+        });
+        navLinks[2].classList.add("activeLink");
+        let target = document.querySelector("#about");
+        const yOffset = -75;
+        const y =
+          target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        history.pushState(null, null, hashval);
+        e.preventDefault();
+      };
     </script>
+    <!-- <script src="./src/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/form.js"></script>
   </body>
 </html>
