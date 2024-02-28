@@ -97,14 +97,14 @@
         <!--Menu-->
         <div
           class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
-          :class="{ 'block shadow-3xl border-t ': isOpen, 'hidden': !isOpen }"
+          :class="{ 'block shadow-3xl ': isOpen, 'hidden': !isOpen }"
           @click.away="isOpen = false"
           x-show.transition="true">
           <ul
-            class="pt-2 px-1 lg:pt-0 list-reset lg:flex justify-end flex-1 gap-5 items-center">
-            <li class="mr-3">
+            class="pt-2 lg:pt-0 list-reset lg:flex justify-end flex-1 gap-5 items-center " >
+            <li class="mr-3 border-t md:border-t">
               <a
-                class="w-full md:w-fit py-2 md:py-0 inline-block text-grey-2 font-medium hover:bg-blue hover:text-white md:hover:text-blue md:hover:bg-white navLink activeLink"
+                class="w-full md:w-fit py-3 md:p-0 inline-block text-grey-2 font-medium hover:bg-blue hover:text-white md:hover:text-blue md:hover:bg-white navLink activeLink"
                 href="#home"
                 @click="isOpen = false">
                 Home
@@ -112,7 +112,7 @@
             </li>
             <li class="mr-3">
               <a
-                class="w-full md:w-fit py-2 md:py-0 inline-block text-grey-2 font-medium md:hover:text-blue navLink"
+                class="w-full md:w-fit py-3 md:py-0 inline-block text-grey-2 font-medium hover:bg-blue hover:text-white md:hover:text-blue md:hover:bg-white navLink"
                 href="#about"
                 @click="isOpen = false">
                 Mission
@@ -120,7 +120,7 @@
             </li>
             <li class="mr-3">
               <a
-                class="w-full md:w-fit py-2 md:py-0 inline-block text-grey-2 font-medium md:hover:text-blue navLink"
+                class="w-full md:w-fit py-3 md:py-0 inline-block text-grey-2 font-medium hover:bg-blue hover:text-white md:hover:text-blue md:hover:bg-white navLink"
                 href="#services"
                 @click="isOpen = false">
                 Services
@@ -128,7 +128,7 @@
             </li>
             <li class="">
               <a
-                class="w-full md:w-fit py-2 md:py-0 inline-block text-grey-2 font-medium md:hover:text-blue navLink"
+                class="w-full md:w-fit py-3 md:py-0 inline-block text-grey-2 font-medium hover:bg-blue hover:text-white md:hover:text-blue md:hover:bg-white navLink"
                 href="#contact"
                 @click="isOpen = false">
                 Contact
