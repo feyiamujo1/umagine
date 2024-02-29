@@ -19,7 +19,7 @@ const SubmitContactForm = e => {
   correct_response_indicator.classList.add("hidden");
   axios.defaults.headers.post["Content-Type"] = "application/json";
   axios
-    .post("https://formsubmit.co/feyisayoamujoyegbe@gmail.com", {
+    .post("https://formsubmit.co/umagineagency@gmail.com", {
       _subject: "Contact Form Questions/Inquiries",
       _template: "box",
       Name: fullname.value,
